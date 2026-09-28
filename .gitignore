@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Demo database
+demo.db
+
+# Local demo scratch files - never commit the token used in the
+# push protection demo.
+.secret-demo/
+*.local.env
+.env
