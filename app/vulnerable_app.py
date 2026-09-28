@@ -153,5 +153,5 @@ def unsafe_redirect():
 
 
 if __name__ == "__main__":
-    # CodeQL: py/flask-debug - debug mode exposes the Werkzeug console.
-    app.run(debug=True, host="0.0.0.0")
+    # Debug mode must stay disabled: it exposes the Werkzeug console.
+    app.run(debug=False, host="0.0.0.0")
