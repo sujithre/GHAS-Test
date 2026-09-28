@@ -2,6 +2,6 @@
 # Do not copy these versions into a real project.
 Flask==0.12.2
 Jinja2==2.10
-PyYAML==5.1
+PyYAML==6.0.3
 requests==2.19.1
 urllib3==1.24.1
