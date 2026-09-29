@@ -56,9 +56,11 @@ def call_partner_api(url: str):
 def legacy_ssl_context():
     """CodeQL: py/insecure-protocol
 
-    TLS 1.0 is deprecated and vulnerable to downgrade attacks.
+    Restrict connections to TLS 1.2 or newer.
     """
-    return ssl.SSLContext(ssl.PROTOCOL_TLSv1)
+    context = ssl.create_default_context()
+    context.minimum_version = ssl.TLSVersion.TLSv1_2
+    return context
 
 
 def write_report(contents: str) -> str:
